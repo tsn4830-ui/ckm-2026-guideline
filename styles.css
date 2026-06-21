@@ -81,17 +81,30 @@ h1 {
   flex: 0 0 auto;
 }
 
-.actions a {
+.actions a,
+.actions button {
   color: var(--white);
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.35);
   padding: 9px 12px;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.09);
+  cursor: pointer;
 }
 
-.actions a:hover {
+.actions a:hover,
+.actions button:hover {
   background: rgba(255, 255, 255, 0.18);
+}
+
+.download-notice {
+  padding: 10px 18px;
+  color: #082b5f;
+  background: #fff7df;
+  border-bottom: 1px solid #eed38a;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.45;
 }
 
 .app-shell {
@@ -379,11 +392,18 @@ h1 {
 
   .actions {
     width: 100%;
+    flex-wrap: wrap;
   }
 
-  .actions a {
-    flex: 1;
+  .actions a,
+  .actions button {
+    flex: 1 1 30%;
     text-align: center;
+  }
+
+  .download-notice {
+    padding: 9px 12px;
+    font-size: 13px;
   }
 
   .app-shell {
