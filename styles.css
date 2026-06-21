@@ -242,14 +242,14 @@ h1 {
 
 .watermark {
   position: absolute;
-  right: 14px;
-  bottom: 12px;
+  right: 12px;
+  bottom: 10px;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  min-height: 26px;
-  max-width: min(210px, 34%);
-  padding: 4px 8px 4px 5px;
+  gap: 5px;
+  min-height: 22px;
+  max-width: min(160px, 26%);
+  padding: 3px 7px 3px 4px;
   margin: 0;
   border: 1px solid rgba(8, 43, 95, 0.18);
   border-radius: 999px;
@@ -260,8 +260,8 @@ h1 {
 }
 
 .watermark img {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
   flex: 0 0 auto;
   border-radius: 50%;
   opacity: 0.78;
@@ -272,7 +272,7 @@ h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 900;
   letter-spacing: 0;
 }
@@ -412,9 +412,20 @@ h1 {
   }
 
   .watermark {
-    right: 8px;
-    bottom: 8px;
-    max-width: min(190px, 45%);
+    right: 6px;
+    bottom: 6px;
+    max-width: min(128px, 32%);
+    min-height: 19px;
+    padding: 2px 6px 2px 3px;
+  }
+
+  .watermark img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .watermark span {
+    font-size: 9px;
   }
 
   .mobile-jump {
