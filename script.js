@@ -120,7 +120,7 @@ function pad(num) {
 }
 
 function slidePath(index) {
-  return `../origin_image/slide_${pad(index + 1)}.png`;
+  return `origin_image/slide_${pad(index + 1)}.png`;
 }
 
 function renderThumbs() {
