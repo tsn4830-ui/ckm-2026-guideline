@@ -114,8 +114,6 @@ const progress = document.getElementById("progress");
 const notesContent = document.getElementById("notesContent");
 const notesTab = document.getElementById("notesTab");
 const fullTab = document.getElementById("fullTab");
-const pptDownloadLink = document.getElementById("pptDownloadLink");
-const copyPptLink = document.getElementById("copyPptLink");
 const downloadNotice = document.getElementById("downloadNotice");
 
 function pad(num) {
@@ -198,37 +196,6 @@ fullTab.addEventListener("click", () => {
   fullTab.classList.add("active");
   notesTab.classList.remove("active");
   renderNotes();
-});
-
-async function copyText(text) {
-  if (navigator.clipboard && window.isSecureContext) {
-    await navigator.clipboard.writeText(text);
-    return;
-  }
-
-  const textarea = document.createElement("textarea");
-  textarea.value = text;
-  textarea.setAttribute("readonly", "");
-  textarea.style.position = "fixed";
-  textarea.style.left = "-9999px";
-  document.body.appendChild(textarea);
-  textarea.select();
-  document.execCommand("copy");
-  document.body.removeChild(textarea);
-}
-
-copyPptLink.addEventListener("click", async () => {
-  const originalText = copyPptLink.textContent;
-  try {
-    await copyText(pptDownloadLink.href);
-    copyPptLink.textContent = "已複製";
-  } catch {
-    copyPptLink.textContent = "請長按連結";
-    downloadNotice.hidden = false;
-  }
-  window.setTimeout(() => {
-    copyPptLink.textContent = originalText;
-  }, 1800);
 });
 
 if (/FBAN|FBAV|FBIOS|FB_IAB|FB4A|Instagram/i.test(navigator.userAgent)) {
