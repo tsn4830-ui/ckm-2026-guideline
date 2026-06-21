@@ -220,34 +220,37 @@ h1 {
 }
 
 .slide-frame {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  align-self: center;
+  justify-self: center;
   min-width: 0;
   min-height: 0;
-  margin: 0;
-}
-
-.slide-frame img {
-  display: block;
   width: min(100%, calc((100vh - 190px) * 16 / 9));
-  max-height: calc(100vh - 220px);
   aspect-ratio: 16 / 9;
-  object-fit: contain;
+  margin: 0;
   background: var(--white);
   box-shadow: var(--shadow);
 }
 
+.slide-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--white);
+}
+
 .watermark {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
   display: inline-flex;
   align-items: center;
-  align-self: flex-end;
   gap: 6px;
-  min-height: 28px;
-  max-width: min(220px, 34%);
+  min-height: 26px;
+  max-width: min(210px, 34%);
   padding: 4px 8px 4px 5px;
-  margin: 8px max(0px, calc((100% - min(100%, calc((100vh - 190px) * 16 / 9))) / 2)) 0 0;
+  margin: 0;
   border: 1px solid rgba(8, 43, 95, 0.18);
   border-radius: 999px;
   color: rgba(8, 43, 95, 0.62);
@@ -257,8 +260,8 @@ h1 {
 }
 
 .watermark img {
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex: 0 0 auto;
   border-radius: 50%;
   opacity: 0.78;
@@ -404,12 +407,14 @@ h1 {
 
   .slide-frame img {
     width: 100%;
+    height: 100%;
     max-height: none;
   }
 
   .watermark {
-    margin: 8px 0 0;
-    max-width: 100%;
+    right: 8px;
+    bottom: 8px;
+    max-width: min(190px, 45%);
   }
 
   .mobile-jump {
