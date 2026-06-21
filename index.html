@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 CKM Syndrome Guideline | 醫師參考版</title>
+    <meta
+      name="description"
+      content="2026 AHA/ACC/ADA/ASN CKM Syndrome Guideline 醫師參考版簡報展示"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">CKM</span>
+        <div>
+          <h1>2026 CKM Syndrome Guideline</h1>
+          <p>AHA/ACC/ADA/ASN | 專業醫師參考版</p>
+        </div>
+      </div>
+      <nav class="actions" aria-label="簡報操作">
+        <a href="ckm_2026_guideline_ppt.pptx" download>下載 PPTX</a>
+        <a href="演講稿.md" download>下載演講稿</a>
+      </nav>
+    </header>
+
+    <main class="app-shell">
+      <aside class="rail" aria-label="投影片縮圖">
+        <div class="rail-head">
+          <span>Slides</span>
+          <span id="slideCount">1 / 12</span>
+        </div>
+        <ol id="thumbs" class="thumb-list"></ol>
+      </aside>
+
+      <section class="stage" aria-label="投影片展示">
+        <div class="viewer-toolbar">
+          <button id="prevBtn" type="button" aria-label="上一張">‹</button>
+          <div class="progress-wrap" aria-hidden="true">
+            <div id="progress" class="progress"></div>
+          </div>
+          <button id="nextBtn" type="button" aria-label="下一張">›</button>
+        </div>
+
+        <figure class="slide-frame">
+          <img id="slideImage" src="origin_image/slide_01.png" alt="Slide 1" />
+          <figcaption class="watermark" aria-label="阿婷醫師的讀書筆記">
+            <img src="assets/ating-logo.png" alt="" aria-hidden="true" />
+            <span>阿婷醫師的讀書筆記</span>
+          </figcaption>
+        </figure>
+
+        <div class="mobile-jump">
+          <label for="slideSelect">快速跳轉</label>
+          <select id="slideSelect"></select>
+        </div>
+      </section>
+
+      <aside class="notes-panel" aria-label="講稿與重點">
+        <div class="tabs" role="tablist" aria-label="文字內容">
+          <button id="notesTab" class="active" type="button">逐頁講稿</button>
+          <button id="fullTab" type="button">完整演講稿</button>
+        </div>
+        <article id="notesContent" class="notes-content"></article>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
